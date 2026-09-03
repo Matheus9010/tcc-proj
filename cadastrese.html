@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="cadastrese.css">
+   
+</head>
+<body>
+    <div id="alertSuccess" class="custom-alert">
+        <i class="fas fa-check-circle fa-lg"></i>
+        <span>Cadastro realizado com sucesso! Bem-vindo ao AEROFITNESS.</span>
+    </div>
+
+    <div class="main-wrapper">
+
+        <div class="logo">
+            <img src="Protótipo_TCC__3.png" alt="logo">
+        </div>
+        
+        <div id="form-container">
+            <div class="form-box">
+                <div class="form-header">
+                    <h1>Cadastre-se</h1>
+                </div>
+
+                <div class="form-content">
+                    <form id="formAcademico">
+                        
+                        <h2>Dados Pessoais</h2>
+
+                        <div class="campo">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex: João Pedro Santos" required>
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo">
+                                <label for="nascimento">Data de nasc.</label>
+                                <input type="date" id="nascimento" name="nascimento" required>
+                            </div>
+                            <div class="campo">
+                                <label for="genero">Gênero</label>
+                                <select id="genero" name="genero">
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Prefiro não informar">Prefiro não informar</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
+                            </div>
+                            <div class="campo">
+                                <label for="nacionalidade">Nacionalidade</label>
+                                <input type="text" id="nacionalidade" name="nacionalidade" placeholder="Ex: Brasileiro">
+                            </div>
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="campo">
+                                <label for="email">E-mail pessoal</label>
+                                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="Sua cidade">
+                            </div>
+                            <div class="campo">
+                                <label for="estado">Estado (UF)</label>
+                                <select id="estado" name="estado">
+                                    <option value="" disabled selected>UF</option>
+                                    <option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option>
+                                    <option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option>
+                                    <option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option>
+                                    <option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option>
+                                    <option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option>
+                                    <option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option>
+                                    <option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option>
+                                    <option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option>
+                                    <option value="SP">SP</option><option value="SE">SE</option><option value="TO">TO</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <h3>Aptidão Física & Objetivos</h3>
+                
+                        <div class="campo">
+                            <label for="objetivos">Quais são seus principais objetivos?</label>
+                            <input type="text" id="objetivos" name="objetivos" placeholder="Ex: Ganho de massa, emagrecimento, saúde..." required>
+                        </div>
+
+                        <div class="linha-dupla">
+                            <div class="campo">
+                                <label for="nivel_treino">Seu nível de treino</label>
+                                <select id="nivel_treino" name="nivel_treino">
+                                    <option value="inicio">Iniciante</option>
+                                    <option value="intermediario">Intermediário</option>
+                                    <option value="pre-avançado">Pré-avançado</option>
+                                    <option value="avançado">Avançado</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="frequencia">Frequência Semanal</label>
+                                <select id="frequencia" name="frequencia">
+                                    <option value="sedentario">Nunca pratiquei</option>
+                                    <option value="recente">Comecei recentemente</option>
+                                    <option value="regular">2 a 3 vezes por semana</option>
+                                    <option value="atleta">Todos os dias</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label>Preferências de Treino (Selecione uma ou mais)</label>
+                            <div class="opcoes-grid">
+                                <label class="opcao-item"><input type="checkbox" name="preferencia" value="musculacao">Força</label>
+                                <label class="opcao-item"><input type="checkbox" name="preferencia" value="cardio"> Perder gordura</label>
+                                <label class="opcao-item"><input type="checkbox" name="preferencia" value="funcional">Treinos calestenico</label>
+                                <label class="opcao-item"><input type="checkbox" name="preferencia" value="crossfit">Melhorar performance</label>
+                                <label class="opcao-item"><input type="checkbox" name="preferencia" value="yoga">Hipertrofia</label>
+                                <label class="opcao-item"><input type="checkbox" name="preferencia" value="natacao">Outras modalidades</label>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="restricoes">Restrições físicas ou recomendações médicas?</label>
+                            <textarea id="restricoes" name="restricoes" placeholder="Ex: Lesão no joelho, pressão alta, asma..."></textarea>
+                        </div>
+
+                        <div class="campo">
+                            <label for="esporte_especifico">Pratica algum esporte específico atualmente?</label>
+                            <input type="text" id="esporte_especifico" name="esporte_especifico" placeholder="Ex: Futebol, Tênis, Ciclismo...">
+                        </div>
+
+                         <div class="campo">
+                            <label for="esporte_especifico">Você possui algum tipo de deficiência?</label>
+                            <input type="text" id="esporte_especifico" name="esporte_especifico" placeholder="Ex: Autismo, Auditivo, Múltipla..."> 
+                        </div>
+
+                        <div class="campo">
+                            <label for="feedback">Feedback(opcional)</label>
+                            <textarea id="feedback" name="feedback" placeholder=""></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-salvar">Finalizar Cadastro</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="academia-page">
+            <div class="hero-academia">
+                <h2>BEM-VINDO À AERO FITNESS, <span id="user-name-display">ATLETA</span>!</h2>
+                <p>Seu cadastro foi processado. Prepare-se para transformar seu corpo e mente.</p>
+            </div>
+            
+            <div class="cards-servicos">
+                <div class="card-servico">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h4>Minha Ficha</h4>
+                    <p>Acesse seu plano de treino personalizado baseado nos seus objetivos.</p>
+                </div>
+                <div class="card-servico">
+                    <i class="fas fa-dumbbell"></i>
+                    <h4>Equipamentos</h4>
+                    <p>Conheça nossa estrutura de ponta e as áreas de treino livre.</p>
+                </div>
+                <div class="card-servico">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Acompanhamento</h4>
+                    <p>Agende sua avaliação física mensal com nossos especialistas.</p>
+                </div>
+            </div>
+
+            <div style="padding: 0 40px 40px; text-align: center;">
+                <button class="btn-salvar" style="max-width: 300px;" onclick="location.reload()">Voltar ao Cadastro</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+   
